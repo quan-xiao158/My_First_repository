@@ -18,8 +18,8 @@ d=np.shape(data)[1]-1
 
 x_train=data[0:m_train,1:].T#X需要转置，按照线代思想x1~xn构成一列
 x_test=data[m_train:,1:].T
-y_train=data[:m_train,0].reshape((1,-1))
-y_test=data[m_train:,0].reshape((1,-1))
+y_train=data[:m_train,0].T
+y_test=data[m_train:,0].T
 '''将数据集划分为训练集和测试集'''
 
 
