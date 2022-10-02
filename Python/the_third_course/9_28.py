@@ -27,8 +27,15 @@ for i in range(iteration):
     w=w-2*learning_rate*np.dot(x_train,e.T)/m_train
     b=b-2*learning_rate*np.dot(e,v)/m_train
     cost=np.dot(e,e.T).item(0)/m_train
-    print(cost)
     cost_saved.append(cost)
 
+y_hat_train=np.dot(w.T,x_train)+b*v.T
+e=y_hat_train-y_train
+
+
+y_hat_train=np.dot(w.T,x_test)+b
+e=y_hat_train-y_test
+print(np.sqrt(np.dot(e,e.T).item(0)/m_train))
 plt.plot(range(1,iteration+1),cost_saved)
 plt.show()
+
