@@ -29,6 +29,7 @@ cost=0
 for i in range(0,iteration):
     y_hat=np.dot(w.T,x_train)+b
     e=y_hat-y_train
+    print(e)
     w=w-learning_rate*np.dot(x_train,e.T)*2/train_number
     b=b-learning_rate*np.dot(e,v)*2/train_number
     cost=np.dot(e,e.T)
