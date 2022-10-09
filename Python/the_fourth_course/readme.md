@@ -1,3 +1,6 @@
 temperature_min-max normalization.py:在温度实验中对数据进行了最大最小归一化，将学习率改为0.1
 temperature_mean normalization.py.py:在温度实验中对数据进行了均值归一化，将学习率改为0.1
 10_4_2.py:画出sigmoid函数图像
+
+特征缩放需要对所有的特征输入做缩放，包括测试集和训练集
+三个特征缩放的选择可以写在一个文件里
